@@ -8,6 +8,10 @@ from pyrogram.enums import ChatMemberStatus
 from config import FORCE_SUB_CHANNEL, FORCE_SUB_CHANNEL2, ADMINS
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors import FloodWait
+from config import JOIN_REQS_DB
+from database.join_reqs import JoinReqs
+
+db = JoinReqs
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL:
