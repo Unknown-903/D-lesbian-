@@ -25,7 +25,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "1119579816"))
 PORT = os.environ.get("PORT", "8080")
 #Database
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://Sistaanimebash:Sistaanimebash@cluster0.w6ucx5p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DB_URI)
+JOIN_REQS_DB = os.environ.get("JOIN_REQS_DB", DB_URI)
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002048696464"))
