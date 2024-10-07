@@ -9,7 +9,7 @@ from bot import Bot
 from config import *
 from helper_func import subscribed, encode, decode, get_messages
 from database.database import add_user, del_user, full_userbase, present_user
-from config import FORCE_SUB_CHANNEL2
+from config import FORCE_SUB_CHANNEL2, FORCE_PIC, FORCE_MSG
 
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
@@ -191,4 +191,3 @@ Unsuccessful: <code>{unsuccessful}</code></b>"""
         msg = await message.reply(REPLY_ERROR)
         await asyncio.sleep(8)
         await msg.delete()
-    
